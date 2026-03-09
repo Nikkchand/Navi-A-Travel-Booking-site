@@ -9,11 +9,11 @@ const PORT = 5500;
 // --- Middleware ---
 // To parse JSON request bodies
 app.use(express.json());
-app.use(express.static(__dirname));
+app.use(express.static("assets"));
 
 // --- Homepage Route ---
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(assets, 'index.html'));
 });
 
 // --- Database Connection ---
